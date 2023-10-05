@@ -33,8 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api',
+    'debug_toolbar',
     'product',
+    'study',
 ]
 
 MIDDLEWARE = [
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'test_hardqode.urls'
@@ -124,3 +126,5 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1',
     'http://127.0.0.1:8000',
 ]
+
+INTERNAL_IPS = ["127.0.0.1", ]
