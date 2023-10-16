@@ -1,3 +1,4 @@
+import datetime
 from django.contrib.auth import get_user_model
 from django.db import models
 
@@ -28,6 +29,7 @@ class LessonViewInfo(models.Model):
         max_length=32
     )
     view_time = models.IntegerField(default=0)
+    last_view_datetime = models.DateTimeField(default=datetime.datetime.now())
 
     class Meta:
         unique_together = ("lesson", "user")
